@@ -8,8 +8,9 @@ using namespace std;
  class test_swap_t
  {
  public:
-     typedef test_swap_t<t_> mytype_t;
-     typedef t_* iterator;
+    typedef t_ value_type;
+    typedef test_swap_t<t_> mytype_t;
+    typedef value_type* iterator;
 
      test_swap_t(int n):_size(n),_ptr(_size ? new t_[_size] : nullptr){}
      test_swap_t():_ptr(nullptr),_size(0){}
